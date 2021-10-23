@@ -1,6 +1,6 @@
 package com.generation.animales;
 
-public class Perro extends Animal {
+public class Perro extends Animal implements Mamiferos,Mascota {
 
     private  int patas;
     private boolean cola;
@@ -11,23 +11,71 @@ public class Perro extends Animal {
         super(nombre);
     }
 
-    public void jugar(){
-        System.out.println("Estoy jugando");
-    }
-    public void ladrar(){
-        System.out.println("Goff");
-    }
+//    public void jugar(){
+//        System.out.println("Estoy jugando");
+//    }
+//    public void ladrar(){
+//        System.out.println("Goff");
+//    }
 
 
     //Anotaciones - Sobre escribe - Polimorfismo
+//    @Override
+//    public void comer(){
+//        System.out.println("Comiendo croquetas");
+//    }
+//
+//    @Override
+//    public void respirar() {
+//        System.out.println("Estoy respirando por la nariz");
+//
+//    }
+
+    //Inicio de la interfaz de Mascota
     @Override
-    public void comer(){
+    public void jugar() {
+        System.out.println("Estoy jugando");
+    }
+
+    @Override
+    public void dormir() {
+
+    }
+
+    @Override
+    public void hablar() {
+
+    }
+
+
+    public void ladrar() {
+        System.out.println("Woof! Woof!");
+    }
+
+    @Override
+    public void comer() {
         System.out.println("Comiendo croquetas");
     }
 
     @Override
     public void respirar() {
-        System.out.println("Estoy respirando por la nariz");
-
+        System.out.println("Respirando por la nariz");
     }
+
+   // Inicio de interfaz de Mamifero
+    @Override
+    public void gestar() {
+        System.out.println("Tiempo de 2-3 meses");
+    }
+
+    @Override
+    public void ingestarLeche() {
+        System.out.println("Estoy tomando leche");
+    }
+
+    @Override
+    public void movilidad() {
+        System.out.println("Camino en 4 patas");
+    }
+
 }
